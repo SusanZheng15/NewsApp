@@ -113,15 +113,14 @@
 		086D5CD522A9D8E600443128 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
-				086D5D1522A9EEE000443128 /* View */,
+				086D5CE222A9D8E800443128 /* Info.plist */,
 				086D5D1022A9E85200443128 /* Misc */,
+				086D5D1C22AA044400443128 /* Utility */,
 				086D5D0422A9DF3600443128 /* Network */,
 				086D5D0B22A9E0FE00443128 /* Model */,
+				086D5D1522A9EEE000443128 /* View */,
 				086D5D1222A9E9FE00443128 /* ViewModel */,
 				086D5D1122A9E8C200443128 /* Controller */,
-				086D5CE222A9D8E800443128 /* Info.plist */,
-				086D5D1822A9FA3D00443128 /* AppUtility.swift */,
-				086D5D1A22A9FA6300443128 /* Constants.swift */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -195,6 +194,15 @@
 				086D5D1622A9EF2A00443128 /* ArticleTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		086D5D1C22AA044400443128 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				086D5D1822A9FA3D00443128 /* AppUtility.swift */,
+				086D5D1A22A9FA6300443128 /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
