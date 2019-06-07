@@ -53,7 +53,6 @@ extension ArticleViewModel {
         }
         return nil
     }
-    
     init(_ article: Article) {
         self.article = article
     }

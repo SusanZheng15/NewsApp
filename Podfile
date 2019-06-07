@@ -6,7 +6,7 @@ target 'NewsApp' do
   use_frameworks!
 
   # Pods for NewsApp
-  pod 'SDWebImage', '~>3.8'
+  pod 'SDWebImage'
 
   target 'NewsAppTests' do
     inherit! :search_paths
