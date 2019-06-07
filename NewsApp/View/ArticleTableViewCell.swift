@@ -46,7 +46,6 @@ class ArticleTableViewCell: UITableViewCell {
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        titleLabel.heightAnchor.constraint(equalToConstant: 45).isActive = true
         
         addSubview(descriptionLabel)
         descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true

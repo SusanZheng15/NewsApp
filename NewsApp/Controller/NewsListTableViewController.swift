@@ -69,7 +69,7 @@ class NewsListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return self.tableView.frame.size.height / 5
+        return self.tableView.frame.size.height / 6
     }
 }
 
