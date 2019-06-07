@@ -26,11 +26,11 @@ class NewsListTableViewController: UITableViewController {
     }
 
     private func setUpTableView(){
+        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
         self.tableView.register(ArticleTableViewCell.self, forCellReuseIdentifier: Constants.cellIdentifier.articleTableViewCell)
     }
     
     private func getData(){
-        
         APIClient.shared.getResult {[weak self] result in
             DispatchQueue.main.async(execute: {
                 switch result {
