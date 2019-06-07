@@ -41,6 +41,7 @@ class ArticleTableViewCell: UITableViewCell {
     }
     
     private func setSubViews(){
+        selectionStyle = .none
         addSubview(titleLabel)
         titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9).isActive = true
