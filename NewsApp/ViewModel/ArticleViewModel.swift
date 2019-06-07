@@ -47,6 +47,13 @@ extension ArticleViewModel {
     var url: String {
         return article.url
     }
+    var articleImageURL: URL? {
+        if let url = URL(string: article.urlToImage){
+            return url
+        }
+        return nil
+    }
+    
     init(_ article: Article) {
         self.article = article
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ArticleTableViewCell: UITableViewCell {
     private lazy var titleLabel: UILabel = {
@@ -61,14 +62,17 @@ class ArticleTableViewCell: UITableViewCell {
         articleImageView.widthAnchor.constraint(equalTo: articleImageView.heightAnchor).isActive = true
         
         addSubview(descriptionLabel)
-        descriptionLabel.topAnchor.constraint(equalTo: articleImageView.bottomAnchor, constant: 10).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10).isActive = true
         descriptionLabel.leadingAnchor.constraint(equalTo: articleImageView.trailingAnchor, constant: 10).isActive = true
-        descriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        descriptionLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor).isActive = true
         
     }
     
     func setArticleDisplay(_ article: ArticleViewModel){
         titleLabel.text = article.title
         descriptionLabel.text = article.description
+        if let url = article.articleImageURL{
+            articleImageView.sd_setImage(with: url)
+        }
     }
 }
