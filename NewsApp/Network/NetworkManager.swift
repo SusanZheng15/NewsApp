@@ -41,6 +41,8 @@ class NetworkManager {
                            if let data = data{
                                 if let result = try? JSONDecoder().decode(T.self, from: data){
                                     completion(.success(result))
+                                } else {
+                                    completion(.couldNotParseJSONData)
                                 }
                             } else {
                                 completion(.couldNotParseJSONData)
