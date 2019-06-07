@@ -15,7 +15,7 @@ class APIClient {
     private init() {}
     
     func getResult(completion: @escaping (APIResult<ArticleList>) -> Void){
-        NetworkManager.shared.getRequest(urlString: "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=0d121252364d4600b75f97dffcbc2984", completion: completion)
+        NetworkManager.shared.getRequest(urlString: "https://newsapi.org/v2/everything?q=apple&from=2019-06-05&to=2019-06-05&sortBy=popularity&apiKey=0d121252364d4600b75f97dffcbc2984", completion: completion)
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct ArticleListViewModel {
     let articles: [Article]
@@ -25,6 +26,11 @@ extension ArticleListViewModel {
         let article = articles[index]
         return ArticleViewModel(article)
     }
+    
+    func openLink(indexPath: IndexPath){
+        guard let url = URL(string: articles[indexPath.row].url) else { return }
+        UIApplication.shared.open(url)
+    }
 }
 
 struct ArticleViewModel {
@@ -37,6 +43,9 @@ extension ArticleViewModel {
     }
     var description: String {
         return article.description
+    }
+    var url: String {
+        return article.url
     }
     init(_ article: Article) {
         self.article = article

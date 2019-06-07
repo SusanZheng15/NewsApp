@@ -22,7 +22,7 @@ class NewsListTableViewController: UITableViewController {
 
     private func setUp(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.title = "News"
+        self.title = "Apple News"
     }
 
     private func setUpTableView(){
@@ -52,6 +52,11 @@ class NewsListTableViewController: UITableViewController {
         }
     }
     
+    private func openLink(_ article: ArticleViewModel){
+        guard let url = URL(string: article.url) else { return }
+        UIApplication.shared.open(url)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return self.articleListViewModel?.numberOfSections ?? 0
     }
@@ -70,6 +75,10 @@ class NewsListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.tableView.frame.size.height / 6
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.articleListViewModel?.openLink(indexPath: indexPath)
     }
 }
 
