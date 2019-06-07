@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NewsListTableViewController.swift
 //  NewsApp
 //
 //  Created by Susan Zheng on 6/6/19.
@@ -15,12 +15,12 @@ class NewsListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUp()
+        setNavigationUI()
         setUpTableView()
         getData()
     }
 
-    private func setUp(){
+    private func setNavigationUI(){
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = "Apple News"
     }
@@ -50,11 +50,6 @@ class NewsListTableViewController: UITableViewController {
                 }
             })
         }
-    }
-    
-    private func openLink(_ article: ArticleViewModel){
-        guard let url = URL(string: article.url) else { return }
-        UIApplication.shared.open(url)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
